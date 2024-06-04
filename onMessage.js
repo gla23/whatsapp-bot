@@ -27,5 +27,5 @@ exports.callback = async (message, client) => {
     const chat = await message.getChat();
     if (message.body.includes("George")) setTimeout(() => chat.archive(), 2000);
   }
-  console.log(message.body);
+  console.log(`${message.body} from ${message.notifyName}`);
 };
